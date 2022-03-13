@@ -2,6 +2,8 @@
 
 import toa_periodicity as tp
 
+print('Warning: this script will take a long time to run!!')
+
 nevents = 10**8
 chi_list = [ 0.0, 0.1, 0.2, 0.3, 0.4 ]
 skip_if_exists = True

@@ -4,9 +4,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import toa_periodicity as tp
 
+
 def make_daniele_histogram(filename_stem, maxgap, smin, smax):
     data_dir = 'data_v2'
-    nevents = 10**6
+    plot_dir = 'plots_v2'
+    nevents = 10**8
     chi = 0.2
 
     data_filename = f'{data_dir}/{filename_stem}.txt'
@@ -27,8 +29,8 @@ def make_daniele_histogram(filename_stem, maxgap, smin, smax):
     plt.ylabel('Counts')
     plt.hist(sims, bins=np.linspace(0.0,smax,100), log=True, color='grey')
     plt.axvline(data_score, color='black', ls=':')
-    plt.show()
-    plt.clf()
+    
+    tp.savefig(f'{plot_dir}/histogram_{filename_stem}.pdf')
 
         
 make_daniele_histogram('event1_p9', maxgap=5, smin=2.0, smax=14.0)

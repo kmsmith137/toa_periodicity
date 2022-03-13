@@ -5,11 +5,11 @@ import numpy as np
 import toa_periodicity as tp
 
 # Note: keep in sync with 04-plots.py
-do_tail_fits = False
+do_tail_fits = True
 data_dir = 'data_v2'
 plot_dir = 'plots_v2'
 analysis_dir = 'analysis_v2'
-nevents = 10**6
+nevents = 10**8
 chi_fid = 0.2
 chi_all = [ 0.0, 0.1, 0.2, 0.3, 0.4 ]
 assert chi_fid in chi_all
